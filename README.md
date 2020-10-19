@@ -25,7 +25,6 @@ Game Page lets users; upload their favorite games to the site, view other user's
 
 ## MVP
 
-- Connect back end Ruby server to the front end React se
 - Users are able to register an account and sign in
 - Users can view favorited, clickable game pictures on the main page
 - Users can upload their own favorite games
