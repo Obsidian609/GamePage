@@ -12,7 +12,6 @@
     - [Time Estimates](#time-estimates)
   - [Server (Back End)](#server-back-end)
     - [ERD Model](#erd-model)
-- [Post-MVP](#post-mvp)
 - [Code Showcase](#code-showcase)
 - [Code Issues & Resolutions](#code-issues--resolutions)
 
@@ -20,22 +19,23 @@
 
 ## Overview
 
-GamePage lets you view other user's favorite games and leave comments of your own for others to see.
+Game Page lets users; upload view other user's favorite games, and leave comments of your own for others to see.
 
 <br>
 
 ## MVP
 
-> Connect back end Ruby server to the 
-> Users are able to register an account and sign in
-> Users can view favorited, clickable game pictures on the main page
-> Users can upload their own favorite games and leave comments under games for others to see
+- Connect back end Ruby server to the front end React se
+- Users are able to register an account and sign in
+- Users can view favorited, clickable game pictures on the main page
+- Users can upload their own favorite games
+- Users can leave comments a game for others to see
 
 ## Post MVP
 
-> Let users change their passwords
-> Add profile pages
-> Add a search bar to lookup specific games
+- Let users change their passwords
+- Add profile pages
+- Add a search bar to lookup specific games
 
 <br>
 
@@ -55,17 +55,17 @@ GamePage lets you view other user's favorite games and leave comments of your ow
 
 #### Wireframes
 
-<img src="https://github.com/Obsidian609/tobecontinued/blob/main/assets/Screenshot(35).png" alt="Wireframe">
+<img src="https://github.com/Obsidian609/tobecontinued/blob/main/assets/Screenshot (35).png" alt="Wireframe">
 
 > <a href="https://whimsical.com/V6dYWhoD8YpwsHFnkWB14N">Whimsical</a>
 
 #### Component Tree
 
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. 
+<img src="https://github.com/Obsidian609/tobecontinued/blob/main/assets/Screenshot (38).png" alt="Component Tree">
+
+> <a href="https://whimsical.com/DdqVP7k6gXAFa19fttDLqT">Component Tree</a>
 
 #### Component Hierarchy
-
-> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
 
 ``` structure
 
@@ -73,9 +73,19 @@ src
 |__ assets/
       |__ images
 |__ components/
-      |__ Header.jsx
+      |__ GameImages.jsx
+      |__ Footer.jsx
+      |__ Nav.jsx
+      |__ Login.jsx
+      |__ Register.jsx
+|__ screens/
+      |__ CommentsPage.jsx
+      |__ MainPage.jsx
+      |__ HomePage.jsx
 |__ services/
-
+      |__ api-config.js
+      |__ auth.js
+      |__ gameimages.js
 ```
 
 #### Component Breakdown
@@ -84,11 +94,11 @@ src
 
 |  Component   |    Type    | state | props | Description                                                      |
 | :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
-|    Header    | functional |   n   |   n   | _The header will contain the navigation and logo._               |
-|  Navigation  | functional |   n   |   n   | _The navigation will provide a link to each of the pages._       |
-|   Gallery    |   class    |   y   |   n   | _The gallery will render the posts using cards in flexbox._      |
-| Gallery Card | functional |   n   |   y   | _The cards will render the post info via props._                 |
-|    Footer    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
+|    Nav    | functional |   n   |   n   | _The nav will contain the title and current username_               |
+|  GameImages  | class |   n   |   n   | _The GameImages component will render any images uploaded by the user._       |
+|   Login    |   class    |   n   |   n   | _Will enable the user to login._      |
+| Register | class |   n   |   y   | _Will let a new user make an account._                 |
+|    Footer    | functional |   n   |   n   | _The footer will show the company name and a link to my github, linkedin, and youtube._ |
 
 #### Time Estimates
 
