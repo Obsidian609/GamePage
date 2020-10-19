@@ -44,7 +44,7 @@ Game Page lets users; upload their favorite games to the site, view other user's
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       | npm  |
+|      React       | _Lorem ipsum dolor sit amet, consectetur._ |
 |   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
 | React SemanticUI | _Lorem ipsum dolor sit amet, consectetur._ |
 |     Express      | _Lorem ipsum dolor sit amet, consectetur._ |
