@@ -19,7 +19,7 @@
 
 ## Overview
 
-Game Page lets users; upload view other user's favorite games, and leave comments of your own for others to see.
+Game Page lets users; upload their favorite games to the site, view other user's favorite games, and leave comments for others to see.
 
 <br>
 
