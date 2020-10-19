@@ -93,7 +93,7 @@ src
 #### Component Breakdown
 
 |  Component   |    Type    | Description                                                      |
-| :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
+| :----------: | :--------: | :--------------------------------------------------------------- |
 |    Nav    | functional | _The nav will contain the title and current username_               |
 |  GameImages  | class | _The GameImages component will render any images uploaded by the user._       |
 |   Login    |   class    | _Will enable the user to login._      |
