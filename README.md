@@ -31,6 +31,8 @@ Game Page lets users; upload view other user's favorite games, and leave comment
 - Users can upload their own favorite games
 - Users can leave comments a game for others to see
 
+<br>
+
 ## Post MVP
 
 - Let users change their passwords
@@ -90,15 +92,13 @@ src
 
 #### Component Breakdown
 
-> Use this section to go into further depth regarding your components, including breaking down the components as stateless or stateful, and considering the passing of data between those components.
-
-|  Component   |    Type    | state | props | Description                                                      |
+|  Component   |    Type    | Description                                                      |
 | :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
-|    Nav    | functional |   n   |   n   | _The nav will contain the title and current username_               |
-|  GameImages  | class |   n   |   n   | _The GameImages component will render any images uploaded by the user._       |
-|   Login    |   class    |   n   |   n   | _Will enable the user to login._      |
-| Register | class |   n   |   y   | _Will let a new user make an account._                 |
-|    Footer    | functional |   n   |   n   | _The footer will show the company name and a link to my github, linkedin, and youtube._ |
+|    Nav    | functional | _The nav will contain the title and current username_               |
+|  GameImages  | class | _The GameImages component will render any images uploaded by the user._       |
+|   Login    |   class    | _Will enable the user to login._      |
+| Register | class | _Will let a new user make an account._                 |
+|    Footer    | functional | _The footer will show the company name and a link to my github, linkedin, and youtube._ |
 
 #### Time Estimates
 
@@ -116,9 +116,9 @@ src
 
 #### ERD Model
 
-<img src="https://github.com/Obsidian609/tobecontinued/blob/main/assets/Screenshot(36).png" alt="ERD">
+<img src="https://github.com/Obsidian609/tobecontinued/blob/main/assets/Screenshot (39).png" alt="ERD">
 
-> <a href="https://drive.google.com/file/d/1objnch9mzVW8NMZ6QdCJhyT3PN8D8hqY/view?usp=sharing">draw.io ERD</a>
+> <a href="https://drive.google.com/file/d/1objnch9mzVW8NMZ6QdCJhyT3PN8D8hqY/view?usp=sharing">ERD</a>
 
 <br>
 
