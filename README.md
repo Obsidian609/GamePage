@@ -85,6 +85,7 @@ src
       |__ CommentsPage.jsx
       |__ MainPage.jsx
       |__ HomePage.jsx
+      |__ Registration.jsx
 |__ services/
       |__ api-config.js
       |__ auth.js
@@ -96,9 +97,9 @@ src
 |  Component   |    Type    | Description                                                      |
 | :----------: | :--------: | :--------------------------------------------------------------- |
 |    Nav    | functional | _The nav will contain the title and current username_               |
-|  GameImages  | class | _The GameImages component will render any images uploaded by the user._       |
-|   Login    |   class    | _Will enable the user to login._      |
-| Register | class | _Will let a new user make an account._                 |
+|  GameImages  | functional | _The GameImages component will render any images uploaded by the user._       |
+|   Login    |   functional    | _Will enable the user to login._      |
+| Register | functional | _Will let a new user make an account._                 |
 |    Footer    | functional | _The footer will show the company name and a link to my github, linkedin, and youtube._ |
 
 #### Time Estimates
