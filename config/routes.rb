@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :comments
   resources :games
   post '/auth/login', to: 'authentication#login'
   get '/auth/verify', to: 'authentication#verify'
