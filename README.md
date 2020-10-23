@@ -44,12 +44,13 @@ Game Page lets users; upload their favorite games to the site, view other user's
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       | yarn react-app |
-|   React Router Dom   | yarn react-router-dom |
-| Axios | yarn axios |
-|     Bcrypt      | bundle install |
+|      React       | npx create-react-app client |
+|   React Router Dom   | npm i react-router-dom |
+| Axios | npm i axios |
+|     Bcrypt      | bundle |
 |  JWT  | - |
 |  Postgresql  | - |
+|  Cors  | - |
 
 
 <br>
