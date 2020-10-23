@@ -1,5 +1,6 @@
 class GamesController < ApplicationController
   before_action :set_game, only: [:show, :update, :destroy]
+  before_action :authorize_request, only: [:create, :update, :destroy]
 
   # GET /games
   def index
@@ -16,7 +17,8 @@ class GamesController < ApplicationController
   # POST /games
   def create
     @game = Game.new(game_params)
-
+    @game.user = @current_user
+    
     if @game.save
       render json: @game, status: :created, location: @game
     else
@@ -46,6 +48,6 @@ class GamesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def game_params
-      params.require(:game).permit(:name, :user_id)
+      params.require(:game).permit(:name)
     end
 end
