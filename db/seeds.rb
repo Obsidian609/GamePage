@@ -6,4 +6,4 @@ User.destroy_all
 
 @game = Game.create(name: 'Dead Space', user: @user)
 
-@comment = Comment.create(name:"Can't wait for the remakes! 10/10 would play again.", user: @user)
+# @comment = Comment.create(name:"Can't wait for the remake (or even HD edition)! 10/10 would play again.", user: @user, game: @game)
