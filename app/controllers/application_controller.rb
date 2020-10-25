@@ -4,26 +4,11 @@ class ApplicationController < ActionController::API
     def encode(payload, exp = 24.hours.from_now)
         payload[:exp] = exp.to_i
         JWT.encode(payload, SECRET_KEY)
-end
+    end
 
     def decode(token)
         decoded = JWT.encode(token, SECRET_KEY)[0]
         HashWithIndifferentAccess.new decoded
-    end
-end
-
-    def create
-        @user = User.new(user_params)
-
-        if @user.save
-            @token = encoded({id: @user.id})
-            render json: {
-                user: @user.attributes.except(:password_digest),
-                token: @token
-            }, status: :created
-        else
-            render json: @user.errors, status: unprocessable_entity
-        end
     end
     
     def authorize_request
@@ -34,7 +19,8 @@ end
             @current_user = User.find(@decoded[:id])
         rescue ActiveRecord::RecordNotFound => e
             render json: { errors: e.message }, status: :unauthorized
-        rescue JWT::DecodeError => elseredner json: { errors: e.message }, status: :unauthorized
+        rescue JWT::DecodeError => e 
+            render json: { errors: e.message }, status: :unauthorized
         end
     end
 end
