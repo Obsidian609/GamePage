@@ -1,24 +1,26 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function GameCreate(props) {
   const [formData, setFormData] = useState({
-    name: '',
-    image: ''
-  })
+    name: "",
+    image: "",
+  });
 
-  const { handleGameCreate } = props
+  const { handleGameCreate } = props;
 
   const handleChange = (e) => {
-    const { name, value } = e.target
-    setFormData({ ...formData, [name]: value })
-  }
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
   return (
-    <form onSubmit={(e) => {
-      e.preventDefault()
-      handleGameCreate(formData)
-    }}>
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        handleGameCreate(formData);
+      }}
+    >
       <h3>Submit Your Favorite Game</h3>
       <label>
         Name:
@@ -29,7 +31,7 @@ export default function GameCreate(props) {
           alt={formData.name}
           onChange={handleChange}
         />
-        <br/>
+        <br />
         Image:
         <input
           type="text"
@@ -40,10 +42,10 @@ export default function GameCreate(props) {
           onChange={handleChange}
         />
       </label>
-      <br/>
+      <br />
       <button>
-        <Link to='/games'>Create</Link>
+        <Link to="/games">Create</Link>
       </button>
     </form>
-  )
+  );
 }
