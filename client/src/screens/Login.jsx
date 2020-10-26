@@ -50,7 +50,7 @@ export default function Login(props) {
             />
             </label>
             <br />
-            <button>Login</button>
+            <button><Link to='/games'>Login</Link></button>
             <br />
             <br />
             <Link to='/register'>Register</Link>

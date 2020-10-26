@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 
 export default function GameEdit(props) {
   const [formData, setFormData] = useState({
@@ -34,12 +34,22 @@ export default function GameEdit(props) {
         Name:
         <input
           type="text"
-          name='name'
+          name="name"
           value={formData.name}
           onChange={handleChange}
         />
+        <br/>
+        Image:
+        <input
+          type="text"
+          name="name"
+          image="text"
+        />
       </label>
-      <button>Create</button>
+      <br/>
+      <button>
+        <Link to='/games'>Create</Link>
+      </button>
     </form>
   )
 }

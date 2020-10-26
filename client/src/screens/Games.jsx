@@ -11,12 +11,22 @@ export default function Games(props) {
       {
         games.map(game => (
           <div key={game.id}>
-            <Link to={`/games/${game.id}`}><p>{game.name}</p></Link>
-            <Link to={`/games/${game.id}/edit`}><button>Edit</button></Link>
+            <Link to={`/games/${game.id}`}>
+              <p>{game.name}</p>
+              <img src={game.image}/>
+            </Link>
+            <br/>
+            <Link to={`/games/${game.id}/edit`}>
+              <button>Edit</button>
+              <br/>
+            </Link>
             <button>Delete</button>
+            
+            
           </div>
         ))
       }
+      <br/>
       <Link to='/games/new'><button>Create</button></Link>
     </div>
   )
