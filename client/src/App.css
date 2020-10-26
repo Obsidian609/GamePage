@@ -1,3 +1,29 @@
 .App {
-  text-align: center
+  text-align: center;
+  font-family: "Grenze Gotisch", cursive;
+  font-size: 30px;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+.responsive {
+  padding: 0 6px;
+  width: 24.99999%;
+  margin-left: 38%
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
 }

@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react'
-import { Route, useHistory, Switch } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { Route, Switch, useHistory } from 'react-router-dom'
 import './App.css'
+import MainContainer from './container/MainContainer'
 import Layout from './layouts/Layout'
 import Login from './screens/Login'
 import Register from './screens/Register'
-import MainContainer from './container/MainContainer'
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth'
 
 function App() {
@@ -53,6 +53,7 @@ function App() {
         </Route>
       </Switch>
     </Layout>
+    
   );
 }
 
