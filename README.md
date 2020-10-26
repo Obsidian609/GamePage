@@ -107,11 +107,11 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested |
 | ------------------- | :------: | :------------: | :-----------: |
-| Backend setup w/ Routes    |    H     |     10 hrs      |      hrs     |
-| Frontend setup |    H     |     10 hrs      |      hrs     |
-| Create CRUD Actions |    H     |     10 hrs      |      hrs     |
-| Styling for each screen |    M     |     10 hrs      |      hrs     |
-| TOTAL               |          |     40 hrs      |      hrs     |
+| Backend setup w/ Routes    |    H     |     10 hrs      |    10 hrs     |
+| Frontend setup |    H     |     10 hrs      |   10 hrs     |
+| Create CRUD Actions |    H     |     10 hrs      |    12 hrs     |
+| Styling for each screen |    M     |     10 hrs      |      10 hrs     |
+| TOTAL               |          |     40 hrs      |      42 hrs     |
 
 <br>
 
