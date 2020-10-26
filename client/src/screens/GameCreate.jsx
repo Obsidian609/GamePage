@@ -26,6 +26,7 @@ export default function GameCreate(props) {
           type="text"
           name="name"
           value={formData.name}
+          alt={formData.name}
           onChange={handleChange}
         />
         <br/>

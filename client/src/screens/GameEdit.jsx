@@ -36,14 +36,18 @@ export default function GameEdit(props) {
           type="text"
           name="name"
           value={formData.name}
+          alt={formData.name}
           onChange={handleChange}
         />
         <br/>
         Image:
         <input
           type="text"
-          name="name"
+          name="image"
           image="text"
+          value={formData.name}
+          alt={formData.name}
+          onChange={handleChange}
         />
       </label>
       <br/>
