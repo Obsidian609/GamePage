@@ -13,9 +13,6 @@ const Title = styled.h1`
   color: #191308ff;
   font-size: 60px;
 `;
-const Button = styled.button`
-  // align-content: left;
-`;
 
 export default function Header(props) {
   const { currentUser, handleLogout } = props;
@@ -30,7 +27,7 @@ export default function Header(props) {
         </>
       ) : (
         <Link to="/login">
-          <Button>Login/Register</Button>
+          <button>Login/Register</button>
         </Link>
       )}
       <br />

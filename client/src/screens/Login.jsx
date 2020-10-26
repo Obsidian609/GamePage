@@ -1,12 +1,12 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Div = styled.div`
-background-color: #677db7ff;
-margin: -20px 0px -10px 0px;
-padding: 100px 0px;
-`
+  background-color: #677db7ff;
+  margin: -20px 0px -10px 0px;
+  padding: 100px 0px;
+`;
 
 export default function Login(props) {
   const [formData, setFormData] = useState({
