@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
-import { destroyGame } from "../services/games";
+import { Link, useParams } from "react-router-dom";
 import "../App.css";
 
 const Div = styled.div`
@@ -12,27 +11,11 @@ const Div = styled.div`
 `;
 
 export default function Games(props) {
-  const { games, currentUser } = props;
-  const [setIsDeleted] = useState(false);
+  const { games } = props;
   const [game] = useState({
     name: "",
     image: "",
   });
-
-  const deleteConfirmation = () => {
-    let r = window.confirm("Delete game?");
-    console.log(r);
-    if (r === true) {
-      if (currentUser) {
-        gameDeleted();
-      }
-    }
-  };
-
-  const gameDeleted = async () => {
-    const deleted = await destroyGame(game.id);
-    setIsDeleted(deleted);
-  };
 
   return (
     <Div>
@@ -54,7 +37,6 @@ export default function Games(props) {
                   <button>Edit</button>
                   <br />
                 </Link>
-                <button onClick={deleteConfirmation}>Delete</button>
               </div>
             ))}
           </div>

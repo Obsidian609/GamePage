@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link, Redirect } from "react-router-dom";
+import { destroyGame } from "../services/games";
 
 export default function GameEdit(props) {
   const [formData, setFormData] = useState({
     name: "",
   });
-
-  const { handleGameEdit, games } = props;
+  const [setIsDeleted] = useState(false);
+  const { handleGameEdit, games, currentUser } = props;
   const { id } = useParams();
 
   useEffect(() => {
@@ -28,6 +29,21 @@ export default function GameEdit(props) {
   if (isAuthenticated) {
     return <Redirect to="/games" />;
   }
+
+  const deleteConfirmation = () => {
+    let r = window.confirm("Delete game?");
+    console.log(r);
+    if (r === true) {
+      if (currentUser) {
+        gameDeleted(id);
+      }
+    }
+  };
+
+  const gameDeleted = async (id) => {
+    const deleted = await destroyGame(id);
+    setIsDeleted(deleted);
+  };
 
   return (
     <form
@@ -58,6 +74,7 @@ export default function GameEdit(props) {
         />
       </label>
       <br />
+      <button onClick={() => destroyGame(id)}>Delete</button>
       <button>
         <Link to="/games">Create</Link>
       </button>
