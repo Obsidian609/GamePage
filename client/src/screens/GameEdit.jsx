@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, Redirect } from 'react-router-dom'
 
 export default function GameEdit(props) {
   const [formData, setFormData] = useState({
@@ -22,6 +22,11 @@ export default function GameEdit(props) {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ [name]: value })
+  }
+
+  const {isAuthenticated} = props
+  if (isAuthenticated) {
+    return <Redirect to='/games' />
   }
 
   return (

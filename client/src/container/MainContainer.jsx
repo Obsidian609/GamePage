@@ -5,7 +5,8 @@ import Games from '../screens/Games'
 import GameCreate from '../screens/GameCreate'
 import GameEdit from '../screens/GameEdit'
 
-export default function MainContainer() {
+export default function MainContainer(props) {
+  const { currentUser } = props
   const [games, setGames] = useState([])
   const history = useHistory()
 
@@ -47,6 +48,7 @@ export default function MainContainer() {
       <Route path='/games'>
         <Games
           games={games}
+          currentUser={currentUser}
         />
       </Route>
     </Switch>

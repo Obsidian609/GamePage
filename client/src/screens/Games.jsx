@@ -1,8 +1,29 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { destroyGame } from '../services/games'
 
 export default function Games(props) {
-  const { games } = props
+  const { games, currentUser } = props
+  const [setIsDeleted] = useState(false)
+  const [game] = useState({
+    name: '',
+    image: ''
+  })
+
+  const deleteConfirmation = () => {
+    let r = window.confirm("Delete game?")
+    console.log(r)
+    if (r === true) {
+      if (currentUser) {        
+        gameDeleted() 
+      }
+    }
+  }
+
+  const gameDeleted = async () => {
+    const deleted = await destroyGame(game.id)
+    setIsDeleted(deleted)
+  }
 
   return (
     <div>
@@ -20,7 +41,7 @@ export default function Games(props) {
               <button>Edit</button>
               <br/>
             </Link>
-            <button>Delete</button>
+            <button onClick={deleteConfirmation}>Delete</button>
             
             
           </div>
