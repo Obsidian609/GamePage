@@ -20,7 +20,7 @@ export default function HomePage(props) {
       {
         currentUser &&
         <>
-          <Link to='/games'>Main Games Page</Link>
+          <Link to='/games'>Games</Link>
         </>
       }
         </div>
