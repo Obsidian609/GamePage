@@ -5,11 +5,7 @@ import MainContainer from "./container/MainContainer";
 import Layout from "./layouts/Layout";
 import Login from "./screens/Login";
 import Register from "./screens/Register";
-import { loginUser,
-  registerUser,
-  removeToken,
-  verifyUser,
-} from "./services/auth";
+import { loginUser, registerUser, removeToken, verifyUser } from "./services/auth";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
