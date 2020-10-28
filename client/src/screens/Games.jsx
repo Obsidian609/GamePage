@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Link, useParams } from "react-router-dom";
+import { Link, Switch } from "react-router-dom";
 import "../App.css";
 
 const Div = styled.div`
@@ -15,6 +15,7 @@ export default function Games(props) {
   const [game] = useState({
     name: "",
     image: "",
+    comments: ""
   });
 
   return (
@@ -25,6 +26,7 @@ export default function Games(props) {
           <div className="responsive">
             {games.map((game) => (
               <div key={game.id}>
+                <Switch>
                 <Link
                   style={{ textDecoration: "none", color: "#191308ff" }}
                   to={`/games/${game.id}`}
@@ -32,6 +34,7 @@ export default function Games(props) {
                   <p>{game.name}</p>
                   <img src={game.image} />
                 </Link>
+                </Switch>
                 <br />
                 <Link to={`/games/${game.id}/edit`}>
                   <button>Edit</button>

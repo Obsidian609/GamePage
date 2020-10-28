@@ -5,8 +5,7 @@ import MainContainer from "./container/MainContainer";
 import Layout from "./layouts/Layout";
 import Login from "./screens/Login";
 import Register from "./screens/Register";
-import {
-  loginUser,
+import { loginUser,
   registerUser,
   removeToken,
   verifyUser,
