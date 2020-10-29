@@ -4,7 +4,7 @@ import { Link, Switch } from "react-router-dom";
 import "../App.css";
 
 export default function Comments() {
-  const { games } = props;
+  const { games } = this.props;
   const [game, setGame] = useState({
     name: "",
     image: "",
