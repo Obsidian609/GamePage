@@ -37,9 +37,6 @@ export default function MainContainer(props) {
 
   return (
     <Switch>
-      <Route path="/games">
-        <Games games={games} currentUser={currentUser} />
-      </Route>
       <Route path="/games/:id/comments">
         <Comments />
       </Route>
@@ -48,6 +45,9 @@ export default function MainContainer(props) {
       </Route>
       <Route path="/games/:id/edit">
         <GameEdit handleGameEdit={handleGameEdit} games={games} />
+      </Route>
+      <Route path="/games">
+        <Games games={games} currentUser={currentUser} />
       </Route>
     </Switch>
   );

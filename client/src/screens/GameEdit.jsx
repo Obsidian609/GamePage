@@ -76,7 +76,7 @@ export default function GameEdit(props) {
       <br />
       <button onClick={() => destroyGame(id)}>Delete</button>
       <button>
-        <Link to="/games">Create</Link>
+        <Link to="/games/new">Create</Link>
       </button>
     </form>
   );

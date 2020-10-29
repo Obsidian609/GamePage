@@ -46,9 +46,9 @@ export default function Footer() {
           <a
             style={{ textDecoration: "none" }}
             target="_blank"
-            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            href="https://generalassemb.ly/"
           >
-            YouTube
+            General Assembly
           </a>
         </Li>
       </Ul>

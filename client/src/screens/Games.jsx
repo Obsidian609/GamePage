@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Link, Switch } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../App.css";
 
 const Div = styled.div`
@@ -12,11 +12,10 @@ const Div = styled.div`
 
 export default function Games(props) {
   const { games } = props;
-  const [game] = useState({
-    name: "",
-    image: "",
-    comments: ""
-  });
+  // const [game] = useState({
+  //   name: "",
+  //   image: "",
+  // });
 
   return (
     <Div>
@@ -26,15 +25,13 @@ export default function Games(props) {
           <div className="responsive">
             {games.map((game) => (
               <div key={game.id}>
-                <Switch>
                 <Link
                   style={{ textDecoration: "none", color: "#191308ff" }}
                   to={`/games/${game.id}`}
                 >
                   <p>{game.name}</p>
-                  <img src={game.image} />
+                  <img src={game.image} alt="favorite game" />
                 </Link>
-                </Switch>
                 <br />
                 <Link to={`/games/${game.id}/edit`}>
                   <button>Edit</button>
