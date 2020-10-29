@@ -8,6 +8,12 @@ const Div = styled.div`
   margin: -20px 0px -10px 0px;
   padding: 50px 0px;
   align-self: center;
+  @media (min-width: 1024px) {
+    background-color: yellow;
+  }
+  @media (max-width: 500px) {
+    background-color: brown;
+  }
 `;
 
 export default function Games(props) {

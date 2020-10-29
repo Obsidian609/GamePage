@@ -4,7 +4,6 @@ import { Route, Switch, useHistory } from "react-router-dom";
 import Games from "../screens/Games";
 import GameCreate from "../screens/GameCreate";
 import GameEdit from "../screens/GameEdit";
-import Comments from "../screens/Comments"
 
 export default function MainContainer(props) {
   const { currentUser } = props;
@@ -37,9 +36,6 @@ export default function MainContainer(props) {
 
   return (
     <Switch>
-      <Route path="/games/:id/comments">
-        <Comments />
-      </Route>
       <Route path="/games/new">
         <GameCreate handleGameCreate={handleGameCreate} />
       </Route>
