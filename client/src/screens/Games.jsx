@@ -39,13 +39,9 @@ export default function Games(props) {
                   <button>Edit</button>
                   <br />
                 </Link>
-                {
-                  game.comments.map(comment => (
-                    <p key={comment.id}>{comment.name}</p>
-                  ))
-
-
-                }
+                {game.comments.map((comment) => (
+                  <p key={comment.id}>{comment.name}</p>
+                ))}
               </div>
             ))}
           </div>
