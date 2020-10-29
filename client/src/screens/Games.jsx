@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import "../App.css";
@@ -12,10 +12,6 @@ const Div = styled.div`
 
 export default function Games(props) {
   const { games } = props;
-  // const [game] = useState({
-  //   name: "",
-  //   image: "",
-  // });
 
   return (
     <Div>
@@ -37,6 +33,13 @@ export default function Games(props) {
                   <button>Edit</button>
                   <br />
                 </Link>
+                {
+                  game.comments.map(comment => (
+                    <p key={comment.id}>{comment.name}</p>
+                  ))
+
+
+                }
               </div>
             ))}
           </div>
