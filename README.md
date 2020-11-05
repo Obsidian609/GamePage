@@ -20,6 +20,7 @@
 ## Overview
 
 Game Page lets users; upload their favorite games to the site, view other user's favorite games, and leave comments for others to see.
+https://angry-liskov-c64b2a.netlify.app/login
 
 <br>
 
